@@ -1,0 +1,15 @@
+{
+  "name": "Siouxsie's Toy Hunt",
+  "short_name": "Siouxsie",
+  "description": "A painterly autumn side-scroller starring Siouxsie the scruffy terrier.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#221912",
+  "theme_color": "#221912",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
