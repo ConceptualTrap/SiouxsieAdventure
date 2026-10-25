@@ -1,33 +1,35 @@
-# Siouxsie's Toy Hunt
+# Siouxsie's Adventure
 
 A painterly autumn side-scroller starring Siouxsie, a scruffy terrier who has caught the scent of her favorite stuffed toy.
 
-Hop the logs, leap the creeks, chase squirrels up their trees, bark the geese off the path, sniff out buried bones, and claim the prize (which does not survive).
+Hop the logs, leap the creeks, chase squirrels up their trees, bark the geese off the path, sniff out buried bones, leave her mark on a few spots, and claim the prize (which does not survive).
 
 ## What's in here
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The whole game: art, animation, sound and controls. No build step. |
+| `index.html` | The whole game: art, animation, music, sound and controls. No build step. |
 | `manifest.webmanifest` | Lets phones install it as a full-screen, landscape app. |
 | `sw.js` | Caches the game so it opens offline after the first visit. |
-| `icons/` | Home-screen icons. |
+| `icons/` | Home-screen icons (pixel Siouxsie). |
 
 ## Put it online with GitHub Pages
 
-1. Create a new repository on GitHub and upload everything in this folder, keeping `index.html` at the top level.
+1. Create a repository on GitHub and upload everything in this folder, keeping `index.html` at the top level.
 2. In the repository, open **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**, pick `main` and `/ (root)`, and save.
 4. After a minute the game is live at `https://<your-username>.github.io/<repo-name>/`.
 
+To update an existing repository, upload the new files over the old ones.
+
 ## Play it on a phone
 
-Open the GitHub Pages link on your phone and hold it sideways.
+Open the link and hold the phone sideways. The controls sit in the margins either side of the game.
 
-- **iPhone (Safari):** tap Share → **Add to Home Screen**. It then opens full screen, like an app.
-- **Android (Chrome):** tap ⋮ → **Install app** or **Add to Home screen**.
+- **iPhone (Safari):** Share → **Add to Home Screen** opens it full screen like an app.
+- **Android (Chrome):** ⋮ → **Install app** or **Add to Home screen**.
 
-Sound starts after your first tap. On iPhone, the ring/silent switch must be off to hear game sounds. The **Sound on / off** button in the top corner (or the M key) mutes everything.
+Music starts after your first tap. On iPhone the silent switch must be off to hear it.
 
 ## Controls
 
@@ -36,12 +38,17 @@ Sound starts after your first tap. On iPhone, the ring/silent switch must be off
 | Walk / turn around | ← → or A D | ◀ ▶ |
 | Run | Keep holding a direction | Keep holding ◀ ▶ |
 | Jump (hold for higher) | Space, ↑ or W | Jump |
-| Sniff and dig up bones | ↓ or S | Sniff |
+| Sniff (dig bones, mark spots) | ↓ or S | Sniff |
 | Bark (shoos geese) | R | Bark |
-| Sound on / off | M | Sound button |
+| Pause | P or Esc | Pause button |
+| Sound / music on or off | M / N | In the pause and title menus |
+
+## Music
+
+Three original songs, all sequenced live in the browser: **Cider Stand** on the title screen, **Leaf Pile Shuffle** while you play, and **Sidewalk Strut** on the ending screen.
 
 ## How it's made
 
-Everything is generated in code on an HTML canvas, with no image or audio files. The scenery is painted at load from thousands of small brush dabs, layered with parallax and a canvas-weave paper texture. Siouxsie is a procedural rig: two-bone leg IK with walk and gallop cycles, spring-driven ears and body, a physics-chained feathery tail, and blended poses for sniffing, digging, sitting, shaking off water, barking, dancing and her proud finish. Every sound, from birdsong to goose honks to the toy's last squeak, is synthesized live with the Web Audio API.
+Everything is generated in code, with no image or audio files. The scenery is painted at load from thousands of small brush dabs; the title screen is pixel art computed pixel by pixel. Siouxsie is a procedural rig with two-bone leg IK, walk and gallop cycles, spring-driven ears and body, and a physics-chained tail. Every sound and every note of music is synthesized with the Web Audio API.
 
-Fonts load from Google Fonts (Young Serif, Karla, Caveat); the game falls back to system fonts offline.
+Fonts load from Google Fonts (Young Serif, Karla, Caveat, Pixelify Sans); the game falls back to system fonts offline.

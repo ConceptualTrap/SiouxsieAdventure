@@ -1,5 +1,6 @@
 // Caches the game so it opens offline after the first visit.
-const CACHE = 'siouxsie-v6';
+// Bump CACHE whenever you upload a new version so phones pick it up.
+const CACHE = 'siouxsie-v7';
 const FILES = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
